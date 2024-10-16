@@ -30,7 +30,7 @@ function traverseAndGenerateCode(frame: FrameNode) {
 }
 
 function main() {
-  const iconsFrame = figma.currentPage.findOne(node => node.id === '1:206' && node.type === 'FRAME');
+  const iconsFrame = figma.currentPage.findOne(node => node.name === 'Icons' && node.type === 'FRAME');
 
   if (iconsFrame && iconsFrame.type === 'FRAME') {
     traverseAndGenerateCode(iconsFrame as FrameNode);
